@@ -1,0 +1,5 @@
+C:\Users\Mariusz\Documents\Visual Studio 2012\Projects\Portal\Wybory\Wybory\bin\Wybory.dll
+C:\Users\Mariusz\Documents\Visual Studio 2012\Projects\Portal\Wybory\Wybory\bin\Wybory.pdb
+C:\Users\Mariusz\Documents\Visual Studio 2012\Projects\Portal\Wybory\Wybory\obj\Debug\Wybory.dll
+C:\Users\Mariusz\Documents\Visual Studio 2012\Projects\Portal\Wybory\Wybory\obj\Debug\Wybory.pdb
+C:\Users\Mariusz\Documents\Visual Studio 2012\Projects\Portal\Wybory\Wybory\obj\Debug\Wybory.csprojResolveAssemblyReference.cache
