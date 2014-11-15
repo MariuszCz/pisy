@@ -15,10 +15,10 @@
     <AssemblyName>Wybory</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressSSLPort>44311</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,6 +66,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="history.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Manager.aspx" />
     <Content Include="Registration.aspx" />
@@ -75,15 +76,31 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="User.aspx" />
+    <Content Include="UserForm.aspx" />
     <Content Include="Users.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="UserView.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="history.aspx.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="history.aspx.designer.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -99,6 +116,11 @@
       <DependentUpon>Manager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,12 +128,33 @@
     <Compile Include="Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm.aspx.cs">
+      <DependentUpon>UserForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserForm.aspx.designer.cs">
+      <DependentUpon>UserForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserView.aspx.cs">
+      <DependentUpon>UserView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserView.aspx.designer.cs">
+      <DependentUpon>UserView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +164,7 @@
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <PropertyGroup>
@@ -138,7 +182,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62839</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62635/</IISUrl>
+          <IISUrl>https://localhost:44311/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

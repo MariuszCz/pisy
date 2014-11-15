@@ -13,7 +13,7 @@ namespace Wybory
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
        
@@ -37,6 +37,19 @@ namespace Wybory
                 {
                     Session["New"] = username.Text;
                     Response.Write("Password is correct");
+
+
+                    String insertQuery = "insert into History (Id,Username,Data) values (@id,@usname,@data)";
+                    SqlCommand ins = new SqlCommand(insertQuery, conn);
+                  
+                    SqlCommand licznik_rek = new SqlCommand("SELECT COUNT(*) FROM History", conn);
+                    string licznik_g = Convert.ToString(licznik_rek.ExecuteScalar());
+                    int licznik = Convert.ToInt32(licznik_g);
+                    licznik++;
+                    ins.Parameters.AddWithValue("@id", licznik);
+                    ins.Parameters.AddWithValue("@usname", username.Text);
+                    ins.Parameters.AddWithValue("@data", DateTime.Now.ToString());
+                    ins.ExecuteNonQuery();
                     if (username.Text == "admin")
                     {
                         Response.Redirect("Manager.aspx");

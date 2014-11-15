@@ -10,7 +10,16 @@
 namespace Wybory {
     
     
-    public partial class Manager {
+    public partial class UserForm {
+        
+        /// <summary>
+        /// Head1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
         
         /// <summary>
         /// form1 control.
@@ -31,39 +40,30 @@ namespace Wybory {
         protected global::System.Web.UI.WebControls.Label welcome;
         
         /// <summary>
-        /// Button2 control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// users control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button users;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// votes control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button votes;
-        
-        /// <summary>
-        /// history control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button history;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

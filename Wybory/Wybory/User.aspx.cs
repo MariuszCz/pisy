@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Wybory
 {
-    public partial class Manager : System.Web.UI.Page
+    public partial class User : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,19 +34,9 @@ namespace Wybory
             Response.Redirect("Login.aspx");
         }
 
-        protected void users_Click(object sender, EventArgs e)
+        protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("User.aspx");
-        }
-
-        protected void votes_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("UserView.aspx");
-        }
-
-        protected void history_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("history.aspx");
+            Response.Redirect("Manager.aspx");
         }
     }
 }
